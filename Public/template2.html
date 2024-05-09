@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information - 2</title>
+    <style>
+        /* Inline CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button[type="submit"],
+        button[type="reset"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+            button[type="submit"]:hover,
+            button[type="reset"]:hover {
+                background-color: #0056b3;
+            }
+    </style>
+</head>
+<body>
+    <form id="userForm">
+        <div>
+            <label for="first_name">First Name - 2:</label>
+            <input type="text" id="first_name" name="first_name" required>
+        </div>
+        <div>
+            <label for="last_name">Last Name - 2:</label>
+            <input type="text" id="last_name" name="last_name" required>
+        </div>
+        <div>
+            <label for="email">Email - 2:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="mobile">Mobile - 2:</label>
+            <input type="tel" id="mobile" name="mobile" required>
+        </div>
+        <div>
+            <button type="submit" onclick="submitForm()">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+
+    <script>
+        // Inline JavaScript
+        function submitForm() {
+            var firstName = document.getElementById("first_name").value;
+            var lastName = document.getElementById("last_name").value;
+            var email = document.getElementById("email").value;
+            var mobile = document.getElementById("mobile").value;
+
+            // Do something with the form data, for example, send it to a server
+            console.log("Form submitted with data:");
+            console.log("First Name: " + firstName);
+            console.log("Last Name: " + lastName);
+            console.log("Email: " + email);
+            console.log("Mobile: " + mobile);
+
+            // Prevent the form from submitting normally
+            event.preventDefault();
+        }
+    </script>
+</body>
+</html>
